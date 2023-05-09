@@ -742,28 +742,28 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/./src/components/containers/LeftPanel/index.tsx": {
+    "(app-client)/./src/app/layout.tsx": {
       "*": {
-        "id": "(sc_client)/./src/components/containers/LeftPanel/index.tsx",
+        "id": "(sc_client)/./src/app/layout.tsx",
         "name": "*",
         "chunks": [
-          "app/page:static/chunks/app/page.js"
+          "app/layout:static/chunks/app/layout.js"
         ],
         "async": false
       },
       "": {
-        "id": "(sc_client)/./src/components/containers/LeftPanel/index.tsx",
+        "id": "(sc_client)/./src/app/layout.tsx",
         "name": "",
         "chunks": [
-          "app/page:static/chunks/app/page.js"
+          "app/layout:static/chunks/app/layout.js"
         ],
         "async": false
       },
-      "LeftPanel": {
-        "id": "(sc_client)/./src/components/containers/LeftPanel/index.tsx",
-        "name": "LeftPanel",
+      "default": {
+        "id": "(sc_client)/./src/app/layout.tsx",
+        "name": "default",
         "chunks": [
-          "app/page:static/chunks/app/page.js"
+          "app/layout:static/chunks/app/layout.js"
         ],
         "async": false
       }
@@ -773,7 +773,7 @@ self.__RSC_MANIFEST={
         "id": "(sc_client)/./src/components/containers/SideBar/index.tsx",
         "name": "*",
         "chunks": [
-          "app/page:static/chunks/app/page.js"
+          "app/layout:static/chunks/app/layout.js"
         ],
         "async": false
       },
@@ -781,7 +781,7 @@ self.__RSC_MANIFEST={
         "id": "(sc_client)/./src/components/containers/SideBar/index.tsx",
         "name": "",
         "chunks": [
-          "app/page:static/chunks/app/page.js"
+          "app/layout:static/chunks/app/layout.js"
         ],
         "async": false
       },
@@ -789,7 +789,7 @@ self.__RSC_MANIFEST={
         "id": "(sc_client)/./src/components/containers/SideBar/index.tsx",
         "name": "SideBar",
         "chunks": [
-          "app/page:static/chunks/app/page.js"
+          "app/layout:static/chunks/app/layout.js"
         ],
         "async": false
       }
@@ -2512,27 +2512,27 @@ self.__RSC_MANIFEST={
         "static/css/app/layout.css"
       ]
     },
-    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/containers/LeftPanel/index.tsx": {
-      "id": "(app-client)/./src/components/containers/LeftPanel/index.tsx",
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/app/layout.tsx": {
+      "id": "(app-client)/./src/app/layout.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/containers/LeftPanel/index.tsx#": {
-      "id": "(app-client)/./src/components/containers/LeftPanel/index.tsx",
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/app/layout.tsx#": {
+      "id": "(app-client)/./src/app/layout.tsx",
       "name": "",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/containers/LeftPanel/index.tsx#LeftPanel": {
-      "id": "(app-client)/./src/components/containers/LeftPanel/index.tsx",
-      "name": "LeftPanel",
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/app/layout.tsx#default": {
+      "id": "(app-client)/./src/app/layout.tsx",
+      "name": "default",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -2540,7 +2540,7 @@ self.__RSC_MANIFEST={
       "id": "(app-client)/./src/components/containers/SideBar/index.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -2548,7 +2548,7 @@ self.__RSC_MANIFEST={
       "id": "(app-client)/./src/components/containers/SideBar/index.tsx",
       "name": "",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
@@ -2556,7 +2556,7 @@ self.__RSC_MANIFEST={
       "id": "(app-client)/./src/components/containers/SideBar/index.tsx",
       "name": "SideBar",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     }
