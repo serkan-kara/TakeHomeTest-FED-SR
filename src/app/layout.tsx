@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						<Navigation isSettingsOpen={isSettingsOpen} setIsSettingsOpen={setIsSettingsOpen} />
 						<div className='flex w-full h-screen'>
 							<CollapsibleMenu isOpen={isPanelOpen} />
-							<div className='w-full'>{children}</div>
+							<div className='w-full px-4'>{children}</div>
 							<SettingsMenu isSettingsOpen={isSettingsOpen} />
 						</div>
 					</div>

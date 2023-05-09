@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react/jsx-runtime");
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -256,14 +256,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7199:
+/***/ 214:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8301, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9222, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8301, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3751, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4765, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5192, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3751, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5192, 23))
 
 /***/ }),
 
@@ -540,7 +540,7 @@ function RootLayout({ children  }) {
                                         isOpen: isPanelOpen
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                        className: "w-full",
+                                        className: "w-full px-4",
                                         children: children
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx(SettingsMenu, {
@@ -675,7 +675,7 @@ const e0 = proxy["TabContainer"];
 function Home() {
     return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
         children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-            className: "w-full bg-red-400",
+            className: "w-full bg-white rounded-lg px-2",
             children: /*#__PURE__*/ jsx_runtime_.jsx(e0, {})
         })
     });
