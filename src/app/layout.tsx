@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={inter.className}>
 				<div className='flex w-full bg-slate-100'>
 					<SideBar setPanelOpen={setIsPanelOpen} isPanelOpen={isPanelOpen} />
-					<div className='w-full'>
+					<div className='w-full flex flex-col'>
 						<Navigation isSettingsOpen={isSettingsOpen} setIsSettingsOpen={setIsSettingsOpen} />
 						<div className='flex w-full h-screen'>
 							<CollapsibleMenu isOpen={isPanelOpen} />

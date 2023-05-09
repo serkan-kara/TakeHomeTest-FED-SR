@@ -793,6 +793,58 @@
         ],
         "async": false
       }
+    },
+    "(app-client)/./src/components/ui/SearchInput/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/ui/SearchInput/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/layout:static/chunks/app/layout.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/ui/SearchInput/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/layout:static/chunks/app/layout.js"
+        ],
+        "async": false
+      },
+      "SearchInput": {
+        "id": "(sc_client)/./src/components/ui/SearchInput/index.tsx",
+        "name": "SearchInput",
+        "chunks": [
+          "app/layout:static/chunks/app/layout.js"
+        ],
+        "async": false
+      }
+    },
+    "(app-client)/./src/components/containers/TabContainer/index.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/components/containers/TabContainer/index.tsx",
+        "name": "*",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "": {
+        "id": "(sc_client)/./src/components/containers/TabContainer/index.tsx",
+        "name": "",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      },
+      "TabContainer": {
+        "id": "(sc_client)/./src/components/containers/TabContainer/index.tsx",
+        "name": "TabContainer",
+        "chunks": [
+          "app/page:static/chunks/app/page.js"
+        ],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -2557,6 +2609,54 @@
       "name": "SideBar",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/ui/SearchInput/index.tsx": {
+      "id": "(app-client)/./src/components/ui/SearchInput/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/ui/SearchInput/index.tsx#": {
+      "id": "(app-client)/./src/components/ui/SearchInput/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/ui/SearchInput/index.tsx#SearchInput": {
+      "id": "(app-client)/./src/components/ui/SearchInput/index.tsx",
+      "name": "SearchInput",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/containers/TabContainer/index.tsx": {
+      "id": "(app-client)/./src/components/containers/TabContainer/index.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/containers/TabContainer/index.tsx#": {
+      "id": "(app-client)/./src/components/containers/TabContainer/index.tsx",
+      "name": "",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "/Users/serkankara/Desktop/TakeHomeTest-FED-SR/src/components/containers/TabContainer/index.tsx#TabContainer": {
+      "id": "(app-client)/./src/components/containers/TabContainer/index.tsx",
+      "name": "TabContainer",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     }

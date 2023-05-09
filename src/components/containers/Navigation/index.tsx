@@ -9,7 +9,7 @@ interface INavigationProps {
 
 const Navigation: React.FC<INavigationProps> = ({ setIsSettingsOpen, isSettingsOpen }) => {
 	return (
-		<div className='bg-slate-100 flex py-4'>
+		<div className='bg-slate-100 flex py-4 space-x-2'>
 			<div className='flex items-center w-64 px-4'>
 				<BeakerIcon className='h-8 w-8 text-black focus:outline-none' />
 				<span className='ml-2'>QMail</span>
