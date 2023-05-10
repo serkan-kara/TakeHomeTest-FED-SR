@@ -917,7 +917,7 @@ var ReactToastify = __webpack_require__(1536);
 
 
 const ToastNotification = ()=>{
-    const notify = ()=>(0,react_toastify_esm/* toast */.Am)("Wow so easy!");
+    const notify = ()=>react_toastify_esm/* toast.success */.Am.success("Mail deleted!");
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("button", {
@@ -926,7 +926,10 @@ const ToastNotification = ()=>{
                     className: "w-4 h-4 text-red-400"
                 })
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx(react_toastify_esm/* ToastContainer */.Ix, {})
+            /*#__PURE__*/ jsx_runtime_.jsx(react_toastify_esm/* ToastContainer */.Ix, {
+                position: "bottom-left",
+                theme: "dark"
+            })
         ]
     });
 };
