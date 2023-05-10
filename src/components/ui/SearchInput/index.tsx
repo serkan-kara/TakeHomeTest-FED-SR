@@ -1,6 +1,8 @@
 "use client";
 import { MagnifyingGlassCircleIcon, AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { Button } from "../Button";
+import { Input } from "../Input";
 
 const SearchInput = () => {
 	const [isSearchSettingsOpen, setIsSearchSettingsOpen] = useState<boolean>(false);
@@ -17,8 +19,10 @@ const SearchInput = () => {
 					<AdjustmentsHorizontalIcon className=' h-6 w-6 text-slate-600 focus:outline-none' />
 				</button>
 			</div>
-			<div className={`${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full drop-shadow`}>
-				Search bar
+			<div className={`${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full drop-shadow p-4`}>
+				<Input label='From' />
+				<Input label='To' />
+				<Button />
 			</div>
 		</div>
 	);

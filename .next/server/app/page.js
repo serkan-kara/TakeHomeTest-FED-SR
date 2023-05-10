@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react/jsx-runtime");
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -270,7 +270,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 /***/ 9280:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9359))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4498))
 
 /***/ }),
 
@@ -281,7 +281,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 9359:
+/***/ 4498:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -302,18 +302,212 @@ var layout_tsx_import_Inter_arguments_subsets_latin_variableName_inter_default =
 var globals = __webpack_require__(8360);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(8038);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/popover/popover.js + 8 modules
+var popover = __webpack_require__(7803);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/transitions/transition.js + 8 modules
+var transition = __webpack_require__(7715);
+;// CONCATENATED MODULE: ./src/components/ui/ButtonPopover/index.tsx
+
+
+const ButtonPopover = ({ children , button , className  })=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(popover/* Popover */.J, {
+        className: "relative flex items-center",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Button */.J.Button, {
+                className: "outline-none",
+                children: button
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(transition/* Transition */.u, {
+                enter: "transition duration-100 ease-out",
+                enterFrom: "transform scale-95 opacity-0",
+                enterTo: "transform scale-100 opacity-100",
+                leave: "transition duration-75 ease-out",
+                leaveFrom: "transform scale-100 opacity-100",
+                leaveTo: "transform scale-95 opacity-0",
+                children: /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Panel */.J.Panel, {
+                    className: className,
+                    children: children
+                })
+            })
+        ]
+    });
+};
+
+
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/Bars3Icon.js
 var Bars3Icon = __webpack_require__(6501);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/EnvelopeIcon.js
 var EnvelopeIcon = __webpack_require__(7966);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/PencilIcon.js
+var PencilIcon = __webpack_require__(5308);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChatBubbleLeftIcon.js
 var ChatBubbleLeftIcon = __webpack_require__(6809);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/UserGroupIcon.js
 var UserGroupIcon = __webpack_require__(170);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/VideoCameraIcon.js
 var VideoCameraIcon = __webpack_require__(2476);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/InboxIcon.js
+var InboxIcon = __webpack_require__(8429);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/StarIcon.js
+var StarIcon = __webpack_require__(5283);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ClockIcon.js
+var ClockIcon = __webpack_require__(6047);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/CheckBadgeIcon.js
+var CheckBadgeIcon = __webpack_require__(8022);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/PaperAirplaneIcon.js
+var PaperAirplaneIcon = __webpack_require__(6427);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/DocumentIcon.js
+var DocumentIcon = __webpack_require__(9724);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/InformationCircleIcon.js
+var InformationCircleIcon = __webpack_require__(5680);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChatBubbleLeftRightIcon.js
+var ChatBubbleLeftRightIcon = __webpack_require__(5073);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/TagIcon.js
+var TagIcon = __webpack_require__(4648);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/TicketIcon.js
+var TicketIcon = __webpack_require__(8801);
+// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/disclosure/disclosure.js + 1 modules
+var disclosure = __webpack_require__(4702);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChevronDownIcon.js
+var ChevronDownIcon = __webpack_require__(1245);
+;// CONCATENATED MODULE: ./src/components/containers/TreeMenu/NavItem.tsx
+
+
+
+const NavItem = ({ item  })=>{
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: "flex flex-col text-sm",
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(disclosure/* Disclosure */.p, {
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx(disclosure/* Disclosure.Button */.p.Button, {
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "flex justify-between mb-2 px-2 py-1 hover:bg-slate-300 hover:rounded-lg",
+                        children: [
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                className: "flex space-x-2 items-center",
+                                children: [
+                                    item.icon,
+                                    /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                        children: item.label
+                                    })
+                                ]
+                            }, item.label),
+                            item.child && item.child.length > 0 && /*#__PURE__*/ jsx_runtime_.jsx(ChevronDownIcon, {
+                                className: "w-4 h-4"
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(disclosure/* Disclosure.Panel */.p.Panel, {
+                    className: "mt-1",
+                    children: item.child && item.child.length > 0 && item.child.map((child)=>{
+                        return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "flex ml-4 space-x-2 items-center mb-2",
+                            children: [
+                                child.icon,
+                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                    children: child.label
+                                })
+                            ]
+                        }, item.label);
+                    })
+                })
+            ]
+        })
+    });
+};
+
+
+;// CONCATENATED MODULE: ./src/components/containers/TreeMenu/index.tsx
+
+
+
+const TreeMenu = ()=>{
+    const navItems = [
+        {
+            label: "Inbox",
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(InboxIcon, {
+                className: "w-4 h-4"
+            })
+        },
+        {
+            label: "Starred",
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(StarIcon, {
+                className: "w-4 h-4"
+            })
+        },
+        {
+            label: "Snoozed",
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(ClockIcon, {
+                className: "w-4 h-4"
+            })
+        },
+        {
+            label: "Important",
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(CheckBadgeIcon, {
+                className: "w-4 h-4"
+            })
+        },
+        {
+            label: "Sent",
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(PaperAirplaneIcon, {
+                className: "w-4 h-4"
+            })
+        },
+        {
+            label: "Drafts",
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(DocumentIcon, {
+                className: "w-4 h-4"
+            })
+        },
+        {
+            label: "Categories",
+            child: [
+                {
+                    label: "Social",
+                    icon: /*#__PURE__*/ jsx_runtime_.jsx(UserGroupIcon, {
+                        className: "w-4 h-4"
+                    })
+                },
+                {
+                    label: "Updates",
+                    icon: /*#__PURE__*/ jsx_runtime_.jsx(InformationCircleIcon, {
+                        className: "w-4 h-4"
+                    })
+                },
+                {
+                    label: "Forums",
+                    icon: /*#__PURE__*/ jsx_runtime_.jsx(ChatBubbleLeftRightIcon, {
+                        className: "w-4 h-4"
+                    })
+                },
+                {
+                    label: "Promotions",
+                    icon: /*#__PURE__*/ jsx_runtime_.jsx(TagIcon, {
+                        className: "w-4 h-4"
+                    })
+                }
+            ],
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(TicketIcon, {
+                className: "w-4 h-4"
+            })
+        }
+    ];
+    return /*#__PURE__*/ jsx_runtime_.jsx("nav", {
+        className: "py-4",
+        children: navItems.map((item)=>{
+            return /*#__PURE__*/ jsx_runtime_.jsx(NavItem, {
+                item: item
+            });
+        })
+    });
+};
+
+
 ;// CONCATENATED MODULE: ./src/components/containers/SideBar/index.tsx
 /* __next_internal_client_entry_do_not_use__ SideBar auto */ 
+
+
 
 const SideBar = ({ setPanelOpen , isPanelOpen  })=>{
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -328,17 +522,37 @@ const SideBar = ({ setPanelOpen , isPanelOpen  })=>{
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: "flex flex-col w-16 items-center pt-10 space-y-6",
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx(EnvelopeIcon, {
-                        className: "h-5 w-5 text-black focus:outline-none hover:text-slate-400 duration-300"
+                    /*#__PURE__*/ jsx_runtime_.jsx(ButtonPopover, {
+                        className: "absolute z-50 w-max left-3 -top-4",
+                        button: /*#__PURE__*/ jsx_runtime_.jsx(EnvelopeIcon, {
+                            className: "h-5 w-5 text-black focus:outline-none hover:text-white duration-300 hover:p-2 hover:rounded-full hover:bg-slate-600 hover:w-8 hover:h-8"
+                        }),
+                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "w-64 bg-white p-4 shadow-lg rounded-lg border border-solid border-slate-200 flex flex-col divide-y",
+                            children: [
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    className: "flex pb-5 pt-2 items-center space-x-2",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx(PencilIcon, {
+                                            className: "w-4 h-4"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                            children: "Compose"
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx(TreeMenu, {})
+                            ]
+                        })
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx(ChatBubbleLeftIcon, {
-                        className: "h-5 w-5 text-black focus:outline-none hover:text-slate-400 duration-300"
+                        className: "h-5 w-5 text-black focus:outline-none hover:text-white duration-300 hover:p-2 hover:rounded-full hover:bg-slate-600 hover:w-8 hover:h-8"
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx(UserGroupIcon, {
-                        className: "h-5 w-5 text-black focus:outline-none hover:text-slate-400 duration-300"
+                        className: "h-5 w-5 text-black focus:outline-none hover:text-white duration-300 hover:p-2 hover:rounded-full hover:bg-slate-600 hover:w-8 hover:h-8"
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx(VideoCameraIcon, {
-                        className: "h-5 w-5 text-black focus:outline-none hover:text-slate-400 duration-300"
+                        className: "h-5 w-5 text-black focus:outline-none hover:text-white duration-300 hover:p-2 hover:rounded-full hover:bg-slate-600 hover:w-8 hover:h-8"
                     })
                 ]
             })
@@ -347,101 +561,32 @@ const SideBar = ({ setPanelOpen , isPanelOpen  })=>{
 };
 
 
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/solid/PencilIcon.js
+var solid_PencilIcon = __webpack_require__(6494);
 ;// CONCATENATED MODULE: ./src/components/containers/CollapsibleMenu/index.tsx
+
+
 
 const CollapsibleMenu = ({ isOpen  })=>{
     return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        className: `${isOpen ? "w-64" : "w-0"} duration-300 transition-all bg-slate-100 shrink grow flex flex-col`,
-        children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-            className: "w-64 px-4",
-            children: "Side Menu"
+        className: `${isOpen ? "w-64" : "w-0"} duration-300 transition-all bg-slate-100 shrink grow flex flex-col overflow-hidden`,
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: "w-full px-4",
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("button", {
+                    className: "rounded-lg flex items-center p-3 bg-white border border-solid border-slate-300 space-x-2",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx(solid_PencilIcon, {
+                            className: "w-4 h-4"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                            children: "Compose"
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(TreeMenu, {})
+            ]
         })
-    });
-};
-
-
-// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/popover/popover.js + 13 modules
-var popover = __webpack_require__(5402);
-// EXTERNAL MODULE: ./node_modules/@headlessui/react/dist/components/transitions/transition.js + 8 modules
-var transition = __webpack_require__(7715);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/QueueListIcon.js
-var QueueListIcon = __webpack_require__(4055);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/AcademicCapIcon.js
-var AcademicCapIcon = __webpack_require__(169);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChartBarIcon.js
-var ChartBarIcon = __webpack_require__(2120);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChartPieIcon.js
-var ChartPieIcon = __webpack_require__(9227);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/CloudArrowUpIcon.js
-var CloudArrowUpIcon = __webpack_require__(9822);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/CubeIcon.js
-var CubeIcon = __webpack_require__(2642);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/InboxIcon.js
-var InboxIcon = __webpack_require__(8429);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/PrinterIcon.js
-var PrinterIcon = __webpack_require__(6653);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/PresentationChartLineIcon.js
-var PresentationChartLineIcon = __webpack_require__(2556);
-// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ServerStackIcon.js
-var ServerStackIcon = __webpack_require__(620);
-;// CONCATENATED MODULE: ./src/components/ui/ButtonPopover/index.tsx
-
-
-
-const ButtonPopover = ()=>{
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(popover/* Popover */.J, {
-        className: "relative flex items-center",
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Button */.J.Button, {
-                className: "outline-none",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(QueueListIcon, {
-                    className: "w-6 h-6"
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(transition/* Transition */.u, {
-                enter: "transition duration-100 ease-out",
-                enterFrom: "transform scale-95 opacity-0",
-                enterTo: "transform scale-100 opacity-100",
-                leave: "transition duration-75 ease-out",
-                leaveFrom: "transform scale-100 opacity-100",
-                leaveTo: "transform scale-95 opacity-0",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Panel */.J.Panel, {
-                    className: "absolute z-50 w-max right-0 top-4 text-right",
-                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                        className: "grid grid-cols-3 bg-white gap-3 p-4 rounded-lg drop-shadow",
-                        children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx(AcademicCapIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(ChartBarIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(ChartPieIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(CloudArrowUpIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(CubeIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(InboxIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(PrinterIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(PresentationChartLineIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            }),
-                            /*#__PURE__*/ jsx_runtime_.jsx(ServerStackIcon, {
-                                className: "h-6 w-6 text-black focus:outline-none"
-                            })
-                        ]
-                    })
-                })
-            })
-        ]
     });
 };
 
@@ -450,8 +595,43 @@ const ButtonPopover = ()=>{
 var MagnifyingGlassCircleIcon = __webpack_require__(7699);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/AdjustmentsHorizontalIcon.js
 var AdjustmentsHorizontalIcon = __webpack_require__(2230);
+;// CONCATENATED MODULE: ./src/components/ui/Button/index.tsx
+
+const Button = ()=>{
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
+            children: "Button"
+        })
+    });
+};
+
+
+;// CONCATENATED MODULE: ./src/components/ui/Input/index.tsx
+
+const Input = ({ label  })=>{
+    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: label ? /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: "flex items-center mb-2",
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                    className: "text-sm text-slate-500 w-[100px]",
+                    children: label
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                    className: "w-full outline-none rounded-none border-b border-solid border-slate-200 text-slate-600 text-sm focus:py-2 duration-200"
+                })
+            ]
+        }) : /*#__PURE__*/ jsx_runtime_.jsx("input", {
+            className: "w-full outline-none border border-solid border-slate-200 rounded-md"
+        })
+    });
+};
+
+
 ;// CONCATENATED MODULE: ./src/components/ui/SearchInput/index.tsx
 /* __next_internal_client_entry_do_not_use__ SearchInput auto */ 
+
+
 
 
 const SearchInput = ()=>{
@@ -479,9 +659,17 @@ const SearchInput = ()=>{
                     })
                 ]
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: `${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full drop-shadow`,
-                children: "Search bar"
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: `${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full drop-shadow p-4`,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(Input, {
+                        label: "From"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Input, {
+                        label: "To"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Button, {})
+                ]
             })
         ]
     });
@@ -492,6 +680,24 @@ const SearchInput = ()=>{
 var BeakerIcon = __webpack_require__(9851);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/Cog6ToothIcon.js
 var Cog6ToothIcon = __webpack_require__(1209);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/QueueListIcon.js
+var QueueListIcon = __webpack_require__(4055);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/AcademicCapIcon.js
+var AcademicCapIcon = __webpack_require__(169);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChartBarIcon.js
+var ChartBarIcon = __webpack_require__(2120);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ChartPieIcon.js
+var ChartPieIcon = __webpack_require__(9227);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/CloudArrowUpIcon.js
+var CloudArrowUpIcon = __webpack_require__(9822);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/CubeIcon.js
+var CubeIcon = __webpack_require__(2642);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/PrinterIcon.js
+var PrinterIcon = __webpack_require__(6653);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/PresentationChartLineIcon.js
+var PresentationChartLineIcon = __webpack_require__(2556);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/ServerStackIcon.js
+var ServerStackIcon = __webpack_require__(620);
 ;// CONCATENATED MODULE: ./src/components/containers/Avatar/index.tsx
 
 const Avatar = ()=>{
@@ -539,7 +745,44 @@ const Navigation = ({ setIsSettingsOpen , isSettingsOpen  })=>{
                     className: "h-6 w-6 text-black focus:outline-none"
                 })
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx(ButtonPopover, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(ButtonPopover, {
+                className: "absolute z-50 w-max right-0 top-4 text-right",
+                button: /*#__PURE__*/ jsx_runtime_.jsx(QueueListIcon, {
+                    className: "w-6 h-6"
+                }),
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "grid grid-cols-3 bg-white gap-3 p-4 rounded-lg drop-shadow",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx(AcademicCapIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(ChartBarIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(ChartPieIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(CloudArrowUpIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(CubeIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(InboxIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(PrinterIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(PresentationChartLineIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(ServerStackIcon, {
+                            className: "h-6 w-6 text-black focus:outline-none"
+                        })
+                    ]
+                })
+            }),
             /*#__PURE__*/ jsx_runtime_.jsx(Avatar, {})
         ]
     });
@@ -550,7 +793,7 @@ const Navigation = ({ setIsSettingsOpen , isSettingsOpen  })=>{
 
 const SettingsMenu = ({ isSettingsOpen  })=>{
     return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        className: `${!isSettingsOpen ? "hidden" : "block"} bg-slate-100 shrink grow flex flex-col`,
+        className: `${!isSettingsOpen ? "w-0" : "w-64"} duration-300 bg-slate-100 shrink grow flex flex-col overflow-hidden`,
         children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
             className: "w-full rounded px-4 pb-4 flex flex-1",
             children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -781,7 +1024,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [79,763], () => (__webpack_exec__(9705)));
+var __webpack_exports__ = __webpack_require__.X(0, [79,962], () => (__webpack_exec__(9705)));
 module.exports = __webpack_exports__;
 
 })();
