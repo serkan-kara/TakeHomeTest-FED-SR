@@ -277,7 +277,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 /***/ 4936:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8727))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6552))
 
 /***/ }),
 
@@ -883,7 +883,7 @@ function RootLayout({ children  }) {
 
 /***/ }),
 
-/***/ 8727:
+/***/ 6552:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -905,6 +905,33 @@ var InboxIcon = __webpack_require__(489);
 var TagIcon = __webpack_require__(1695);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/solid/UserGroupIcon.js
 var UserGroupIcon = __webpack_require__(1277);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/TrashIcon.js
+var TrashIcon = __webpack_require__(3001);
+// EXTERNAL MODULE: ./node_modules/react-toastify/dist/react-toastify.esm.mjs
+var react_toastify_esm = __webpack_require__(3578);
+// EXTERNAL MODULE: ./node_modules/react-toastify/dist/ReactToastify.css
+var ReactToastify = __webpack_require__(1536);
+;// CONCATENATED MODULE: ./src/components/ui/ToastNotification/index.tsx
+
+
+
+
+const ToastNotification = ()=>{
+    const notify = ()=>(0,react_toastify_esm/* toast */.Am)("Wow so easy!");
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                onClick: notify,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(TrashIcon, {
+                    className: "w-4 h-4 text-red-400"
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(react_toastify_esm/* ToastContainer */.Ix, {})
+        ]
+    });
+};
+
+
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/StarIcon.js
 var StarIcon = __webpack_require__(5283);
 // EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/TagIcon.js
@@ -912,11 +939,12 @@ var outline_TagIcon = __webpack_require__(4648);
 ;// CONCATENATED MODULE: ./src/components/containers/MailList/index.tsx
 
 
+
 const mails = [
     {
         from: "Etsy",
         label: "Dress in technicolor",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur sit amet dolor sit amet sodales."
+        text: "Lorem ipsum dolor sit amet"
     },
     {
         from: "Etsy",
@@ -926,17 +954,17 @@ const mails = [
     {
         from: "Etsy",
         label: "Booked your trip ?",
-        text: "In quis eros imperdiet, tempor nisl eget, consectetur turpis. In hac habitasse platea dictumst."
+        text: "In quis eros imperdiet"
     },
     {
         from: "Etsy",
         label: "Earth day hurray!",
-        text: "Mauris ac dictum risus, eget viverra leo. Suspendisse vehicula ac ligula at vulputate."
+        text: "Mauris ac dictum risus"
     },
     {
         from: "Etsy",
         label: "Somethig special for mom",
-        text: "Phasellus egestas condimentum tristique. Duis diam nisl, condimentum a orci id, ornare maximus leo."
+        text: "Phasellus egestas condimentum tristique."
     },
     {
         from: "Etsy",
@@ -966,18 +994,19 @@ const MailList = ()=>{
                         children: mail.from
                     }),
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                        className: "flex max-w-[70%] space-x-4",
+                        className: "flex max-w-max space-x-4 mr-auto",
                         children: [
                             /*#__PURE__*/ jsx_runtime_.jsx("span", {
                                 className: "whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[200px]",
                                 children: mail.label
                             }),
                             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: "text-slate-400 whitespace-nowrap overflow-hidden overflow-ellipsis",
+                                className: "text-slate-400",
                                 children: mail.text
                             })
                         ]
-                    })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(ToastNotification, {})
                 ]
             }, mail.label);
         })
@@ -1155,7 +1184,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [79,783], () => (__webpack_exec__(9705)));
+var __webpack_exports__ = __webpack_require__.X(0, [79,638], () => (__webpack_exec__(9705)));
 module.exports = __webpack_exports__;
 
 })();

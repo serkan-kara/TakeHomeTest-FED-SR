@@ -1,10 +1,11 @@
-import { StarIcon, TagIcon } from "@heroicons/react/24/outline";
+import { ToastNotification } from "@/components/ui/ToastNotification";
+import { StarIcon, TagIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 const mails = [
 	{
 		from: "Etsy",
 		label: "Dress in technicolor",
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur sit amet dolor sit amet sodales.",
+		text: "Lorem ipsum dolor sit amet",
 	},
 	{
 		from: "Etsy",
@@ -14,17 +15,17 @@ const mails = [
 	{
 		from: "Etsy",
 		label: "Booked your trip ?",
-		text: "In quis eros imperdiet, tempor nisl eget, consectetur turpis. In hac habitasse platea dictumst.",
+		text: "In quis eros imperdiet",
 	},
 	{
 		from: "Etsy",
 		label: "Earth day hurray!",
-		text: "Mauris ac dictum risus, eget viverra leo. Suspendisse vehicula ac ligula at vulputate.",
+		text: "Mauris ac dictum risus",
 	},
 	{
 		from: "Etsy",
 		label: "Somethig special for mom",
-		text: "Phasellus egestas condimentum tristique. Duis diam nisl, condimentum a orci id, ornare maximus leo.",
+		text: "Phasellus egestas condimentum tristique.",
 	},
 	{
 		from: "Etsy",
@@ -44,12 +45,11 @@ const MailList = () => {
 							<TagIcon className='w-4 h-4 text-slate-400' />
 						</div>
 						<div className='min-w-[100px]'>{mail.from}</div>
-						<div className='flex max-w-[70%] space-x-4'>
+						<div className='flex max-w-max space-x-4 mr-auto'>
 							<span className='whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[200px]'>{mail.label}</span>
-							<div className='text-slate-400 whitespace-nowrap overflow-hidden overflow-ellipsis'>
-								{mail.text}
-							</div>
+							<div className='text-slate-400'>{mail.text}</div>
 						</div>
+						<ToastNotification />
 					</div>
 				);
 			})}
