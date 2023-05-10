@@ -1,6 +1,7 @@
 import { ButtonPopover } from "@/components/ui/ButtonPopover";
 import { SearchInput } from "@/components/ui/SearchInput";
 import { BeakerIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { Avatar } from "../Avatar";
 
 interface INavigationProps {
 	setIsSettingsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,7 +10,7 @@ interface INavigationProps {
 
 const Navigation: React.FC<INavigationProps> = ({ setIsSettingsOpen, isSettingsOpen }) => {
 	return (
-		<div className='bg-slate-100 flex py-4 space-x-2'>
+		<div className='bg-slate-100 flex py-4 pr-4 space-x-2'>
 			<div className='flex items-center w-64 px-4'>
 				<BeakerIcon className='h-8 w-8 text-black focus:outline-none' />
 				<span className='ml-2'>QMail</span>
@@ -19,6 +20,7 @@ const Navigation: React.FC<INavigationProps> = ({ setIsSettingsOpen, isSettingsO
 				<Cog6ToothIcon className='h-6 w-6 text-black focus:outline-none' />
 			</button>
 			<ButtonPopover />
+			<Avatar />
 		</div>
 	);
 };

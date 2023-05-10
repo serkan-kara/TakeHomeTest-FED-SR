@@ -17,7 +17,7 @@ const SearchInput = () => {
 					<AdjustmentsHorizontalIcon className=' h-6 w-6 text-slate-600 focus:outline-none' />
 				</button>
 			</div>
-			<div className={`${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full`}>
+			<div className={`${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full drop-shadow`}>
 				Search bar
 			</div>
 		</div>
