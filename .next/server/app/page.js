@@ -277,7 +277,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 /***/ 4936:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 636))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8727))
 
 /***/ }),
 
@@ -498,7 +498,7 @@ const TreeMenu = ()=>{
         children: navItems.map((item)=>{
             return /*#__PURE__*/ jsx_runtime_.jsx(NavItem, {
                 item: item
-            });
+            }, item.label);
         })
     });
 };
@@ -597,10 +597,12 @@ var MagnifyingGlassCircleIcon = __webpack_require__(7699);
 var AdjustmentsHorizontalIcon = __webpack_require__(2230);
 ;// CONCATENATED MODULE: ./src/components/ui/Button/index.tsx
 
-const Button = ()=>{
+const Button = ({ text , className , align ="left"  })=>{
     return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: `flex ${align === "right" && "justify-end"}`,
         children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-            children: "Button"
+            className: `${className} py-1 px-3 text-white text-sm`,
+            children: text
         })
     });
 };
@@ -636,6 +638,21 @@ const Input = ({ label  })=>{
 
 const SearchInput = ()=>{
     const [isSearchSettingsOpen, setIsSearchSettingsOpen] = (0,react_.useState)(false);
+    const searchMenuRef = (0,react_.useRef)(null);
+    // handle click outside of menu div
+    (0,react_.useEffect)(()=>{
+        function handleClickOutside(event) {
+            if (searchMenuRef.current && !searchMenuRef.current.contains(event.target)) {
+                setIsSearchSettingsOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return ()=>{
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [
+        searchMenuRef
+    ]);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: "w-full relative",
         children: [
@@ -660,6 +677,7 @@ const SearchInput = ()=>{
                 ]
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                ref: searchMenuRef,
                 className: `${isSearchSettingsOpen ? "block" : "hidden"} absolute top-10 bg-white w-full drop-shadow p-4`,
                 children: [
                     /*#__PURE__*/ jsx_runtime_.jsx(Input, {
@@ -668,7 +686,11 @@ const SearchInput = ()=>{
                     /*#__PURE__*/ jsx_runtime_.jsx(Input, {
                         label: "To"
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(Button, {})
+                    /*#__PURE__*/ jsx_runtime_.jsx(Button, {
+                        align: "right",
+                        className: "bg-blue-500 rounded-md w-auto",
+                        text: "Search"
+                    })
                 ]
             })
         ]
@@ -861,52 +883,161 @@ function RootLayout({ children  }) {
 
 /***/ }),
 
-/***/ 636:
+/***/ 8727:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TabContainer": () => (/* binding */ TabContainer)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6786);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8038);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "TabContainer": () => (/* binding */ TabContainer)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(6786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(8038);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/solid/InboxIcon.js
+var InboxIcon = __webpack_require__(489);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/solid/TagIcon.js
+var TagIcon = __webpack_require__(1695);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/solid/UserGroupIcon.js
+var UserGroupIcon = __webpack_require__(1277);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/StarIcon.js
+var StarIcon = __webpack_require__(5283);
+// EXTERNAL MODULE: ./node_modules/@heroicons/react/24/outline/TagIcon.js
+var outline_TagIcon = __webpack_require__(4648);
+;// CONCATENATED MODULE: ./src/components/containers/MailList/index.tsx
+
+
+const mails = [
+    {
+        from: "Etsy",
+        label: "Dress in technicolor",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur sit amet dolor sit amet sodales."
+    },
+    {
+        from: "Etsy",
+        label: "Jewelery with story",
+        text: "Mauris neque metus, convallis at tincidunt ut, posuere a ipsum."
+    },
+    {
+        from: "Etsy",
+        label: "Booked your trip ?",
+        text: "In quis eros imperdiet, tempor nisl eget, consectetur turpis. In hac habitasse platea dictumst."
+    },
+    {
+        from: "Etsy",
+        label: "Earth day hurray!",
+        text: "Mauris ac dictum risus, eget viverra leo. Suspendisse vehicula ac ligula at vulputate."
+    },
+    {
+        from: "Etsy",
+        label: "Somethig special for mom",
+        text: "Phasellus egestas condimentum tristique. Duis diam nisl, condimentum a orci id, ornare maximus leo."
+    },
+    {
+        from: "Etsy",
+        label: "Voted most popular",
+        text: "Nulla nisl augue, venenatis et leo in, auctor aliquet quam. Phasellus lorem tortor"
+    }
+];
+const MailList = ()=>{
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        children: mails.map((mail)=>{
+            return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "flex w-full items-center text-sm border-b border-slate-300 px-4 mb-2 py-1",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "flex space-x-1 px-2",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(StarIcon, {
+                                className: "w-4 h-4 text-slate-400"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(outline_TagIcon, {
+                                className: "w-4 h-4 text-slate-400"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: "min-w-[100px]",
+                        children: mail.from
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                        className: "flex max-w-[70%] space-x-4",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                className: "whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[200px]",
+                                children: mail.label
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "text-slate-400 whitespace-nowrap overflow-hidden overflow-ellipsis",
+                                children: mail.text
+                            })
+                        ]
+                    })
+                ]
+            }, mail.label);
+        })
+    });
+};
+
+
+;// CONCATENATED MODULE: ./src/components/containers/TabContainer/index.tsx
 /* __next_internal_client_entry_do_not_use__ TabContainer auto */ 
+
+
 
 const TabContainer = ()=>{
     const tabsData = [
         {
             label: "Primary",
-            content: "Lipsum"
+            content: /*#__PURE__*/ jsx_runtime_.jsx(MailList, {}),
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(InboxIcon, {
+                className: "w-5 h-5 text-slate-500"
+            })
         },
         {
             label: "Promotions",
-            content: "Lipsum 2"
+            content: /*#__PURE__*/ jsx_runtime_.jsx(MailList, {}),
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(TagIcon, {
+                className: "w-5 h-5 text-slate-500"
+            })
         },
         {
             label: "Social",
-            content: "Lipsum 3"
+            content: /*#__PURE__*/ jsx_runtime_.jsx(MailList, {}),
+            icon: /*#__PURE__*/ jsx_runtime_.jsx(UserGroupIcon, {
+                className: "w-5 h-5 text-slate-500"
+            })
         }
     ];
-    const [activeTabIndex, setActiveTabIndex] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    const [activeTabIndex, setActiveTabIndex] = (0,react_.useState)(0);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "flex space-x-3 border-b",
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "flex border-b",
                 children: tabsData.map((tab, idx)=>{
-                    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                        className: `py-2 border-b-4 transition-colors duration-300 ${idx === activeTabIndex ? "border-teal-500" : "border-transparent hover:border-gray-200"}`,
-                        // Change the active tab on click.
+                    return /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        className: `w-1/3 text-left py-2 pt-4 pl-4 border-b-4 transition-colors duration-300 text-sm ${idx === activeTabIndex ? "border-blue-400" : "border-transparent hover:border-gray-200"}`,
                         onClick: ()=>setActiveTabIndex(idx),
-                        children: tab.label
+                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "flex space-x-2",
+                            children: [
+                                tab.icon,
+                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                    children: tab.label
+                                })
+                            ]
+                        })
                     }, idx);
                 })
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "py-4",
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     children: tabsData[activeTabIndex].content
                 })
             })
@@ -1024,7 +1155,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [79,962], () => (__webpack_exec__(9705)));
+var __webpack_exports__ = __webpack_require__.X(0, [79,783], () => (__webpack_exec__(9705)));
 module.exports = __webpack_exports__;
 
 })();

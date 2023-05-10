@@ -65,11 +65,9 @@ const TreeMenu = () => {
 	];
 
 	return (
-		<nav className="py-4">
+		<nav className='py-4'>
 			{navItems.map((item) => {
-				return (
-					<NavItem item={item} />
-				);
+				return <NavItem key={item.label} item={item} />;
 			})}
 		</nav>
 	);
