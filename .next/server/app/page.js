@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react/jsx-runtime");
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -309,27 +309,60 @@ var transition = __webpack_require__(7715);
 ;// CONCATENATED MODULE: ./src/components/ui/ButtonPopover/index.tsx
 
 
+
 const ButtonPopover = ({ children , button , className  })=>{
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(popover/* Popover */.J, {
+    const buttonRef = (0,react_.useRef)(null);
+    const timeoutDuration = 200;
+    let timeout;
+    const closePopover = ()=>{
+        return buttonRef.current?.dispatchEvent(new KeyboardEvent("keydown", {
+            key: "Escape",
+            bubbles: true,
+            cancelable: true
+        }));
+    };
+    const onMouseEnter = (open)=>{
+        clearTimeout(timeout);
+        if (open) return;
+        return buttonRef.current?.click();
+    };
+    const onMouseLeave = (open)=>{
+        if (!open) return;
+        timeout = setTimeout(()=>closePopover(), timeoutDuration);
+    };
+    return /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover */.J, {
         className: "relative flex items-center",
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Button */.J.Button, {
-                className: "outline-none",
-                children: button
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(transition/* Transition */.u, {
-                enter: "transition duration-100 ease-out",
-                enterFrom: "transform scale-95 opacity-0",
-                enterTo: "transform scale-100 opacity-100",
-                leave: "transition duration-75 ease-out",
-                leaveFrom: "transform scale-100 opacity-100",
-                leaveTo: "transform scale-95 opacity-0",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Panel */.J.Panel, {
-                    className: className,
-                    children: children
+        children: ({ open  })=>{
+            return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "",
+                    onMouseLeave: onMouseLeave.bind(null, open),
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Button */.J.Button, {
+                            ref: buttonRef,
+                            className: "outline-none",
+                            onMouseEnter: onMouseEnter.bind(null, open),
+                            onMouseLeave: onMouseLeave.bind(null, open),
+                            children: button
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx(transition/* Transition */.u, {
+                            enter: "transition duration-100 ease-out",
+                            enterFrom: "transform scale-95 opacity-0",
+                            enterTo: "transform scale-100 opacity-100",
+                            leave: "transition duration-75 ease-out",
+                            leaveFrom: "transform scale-100 opacity-100",
+                            leaveTo: "transform scale-95 opacity-0",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx(popover/* Popover.Panel */.J.Panel, {
+                                className: className,
+                                onMouseEnter: onMouseEnter.bind(null, open),
+                                onMouseLeave: onMouseLeave.bind(null, open),
+                                children: children
+                            })
+                        })
+                    ]
                 })
-            })
-        ]
+            });
+        }
     });
 };
 
@@ -523,9 +556,9 @@ const SideBar = ({ setPanelOpen , isPanelOpen  })=>{
                 className: "flex flex-col w-16 items-center pt-10 space-y-6",
                 children: [
                     /*#__PURE__*/ jsx_runtime_.jsx(ButtonPopover, {
-                        className: "absolute z-50 w-max left-3 -top-4",
+                        className: "absolute z-50 w-screen left-3 -top-4",
                         button: /*#__PURE__*/ jsx_runtime_.jsx(EnvelopeIcon, {
-                            className: "h-5 w-5 text-black focus:outline-none hover:text-white duration-300 hover:p-2 hover:rounded-full hover:bg-slate-600 hover:w-8 hover:h-8"
+                            className: "h-5 w-5 text-black focus:outline-none hover:text-blue-500 duration-300"
                         }),
                         children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                             className: "w-64 bg-white p-4 shadow-lg rounded-lg border border-solid border-slate-200 flex flex-col divide-y",
